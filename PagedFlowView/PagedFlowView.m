@@ -316,6 +316,10 @@
     if (_needsReload) {
         //如果需要重新加载数据，则需要清空相关数据全部重新加载
         
+      for (UIView *subview in _scrollView.subviews) {
+	[subview removeFromSuperview];
+      }
+
         
         //重置pageCount
         if (_dataSource && [_dataSource respondsToSelector:@selector(numberOfPagesInFlowView:)]) {
