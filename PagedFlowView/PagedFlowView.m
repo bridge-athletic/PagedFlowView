@@ -98,6 +98,10 @@
     [_cells replaceObjectAtIndex:index withObject:[NSNull null]];
 }
 
+- (NSMutableArray *)flowViewCells {
+    return _cells;
+}
+
 - (void)refreshVisibleCellAppearance{
     
     if (_minimumPageAlpha == 1.0 && _minimumPageScale == 1.0) {
